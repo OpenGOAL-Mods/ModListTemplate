@@ -1,0 +1,47 @@
+name: Update Mod Source
+
+on:
+  schedule:
+    - cron: "*/30 * * * *" # every 30 minutes - https://crontab.guru/every-30-minutes
+  workflow_dispatch: {}
+
+# Allow one concurrent deployment
+concurrency:
+  group: "mod-source-update"
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-mod-source:
+    name: "Update Mod Source"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: "main"
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: scripts/package-lock.json
+
+      - name: Potentially Update Mod Source
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd scripts
+          npm ci
+          npm run update
+          
+      - name: Commit Version Bump
+        uses: EndBug/add-and-commit@v10
+        with:
+          message: "source: Updated mod source data"
+          push: true
+          default_author: github_actions

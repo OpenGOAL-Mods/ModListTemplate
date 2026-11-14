@@ -1,0 +1,52 @@
+metadata:
+  name: "" # set your mod list name here
+mods:
+  # Add your mod(s) here, see examples commented out below
+
+
+  ## Here's an example mod entry that only targets 1 game (or doesn't need to override fields per-game)
+
+  # checkpoint-randomizer:
+  #   repo_owner: "OpenGOAL-Mods"
+  #   repo_name: "OG-Randomizer"
+  #   url: "https://github.com/OpenGOAL-Mods/OG-Randomizer"
+  #   release_date_override: "2022-08-28"
+  #   # NOTE - only '<' is supported and explicit versions.  The assumption is that '<' is only needed to skip
+  #   # past releases that don't conform to the new format, then beyond that hopefully every release is valid
+  #   # with the potential to maybe skip a bad one here and there.
+  #   ignore_versions:
+  #     - "<0.2.2"
+  #   display_name: "Checkpoint Randomizer"
+  #   description: "Warp to a random checkpoint on various triggers (cells, flies, orbs, eco, death)."
+  #   authors: ["John Smith"]
+  #   tags: ["speedrunning", "challenge", "gameplay-mod", "rng"]
+  #   # website_url: "https://github.com/OpenGOAL-Mods/OG-Randomizer/blob/main/README.md"
+  #   cover_art_url: "https://raw.githubusercontent.com/OpenGOAL-Mods/OG-Randomizer/main/ModImage.png"
+  #   thumbnail_art_url: "https://raw.githubusercontent.com/OpenGOAL-Mods/jakmods.dev/main/ModImages/RandomizerSmall.png"
+
+
+  ## Here's an example mod entry that targets multiple games, letting you customize images, name, and description per-game
+
+  # daxter-2:
+  #   repo_owner: "OpenGOAL-Mods"
+  #   repo_name: "OG-Daxter2"
+  #   url: "https://github.com/OpenGOAL-Mods/OG-Daxter2"
+  #   ignore_versions:
+  #     - "<0.3.4"
+  #   display_name: "Daxter II / Daxter 3"
+  #   description: "Daxter finally gets his sequel!"
+  #   authors: ["John Smith"]
+  #   tags: ["speedrunning", "gameplay-mod"]
+  #   # website_url: "https://github.com/OpenGOAL-Mods/OG-Daxter2/blob/main/README.md"
+  #   per_game_config:
+  #     jak2:
+  #       release_date_override: "2023-11-04"
+  #       cover_art_url: "https://raw.githubusercontent.com/OpenGOAL-Mods/OG-Daxter2/main/daxter2bg.png"
+  #       thumbnail_art_url: "https://raw.githubusercontent.com/OpenGOAL-Mods/OG-Daxter2/refs/heads/main/dax2thumb.png"
+  #       display_name: "Daxter II"
+  #     jak3:
+  #       release_date_override: "2026-04-01"
+  #       cover_art_url: "https://raw.githubusercontent.com/OpenGOAL-Mods/OG-Daxter2/refs/heads/main/dax3.png"
+  #       thumbnail_art_url: "https://raw.githubusercontent.com/OpenGOAL-Mods/OG-Daxter2/refs/heads/main/dax3.png"
+  #       display_name: "Daxter 3"
+  #       description: "Daxter's trilogy is finally complete!"
