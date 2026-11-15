@@ -14,7 +14,7 @@ if (args.length !== 0) {
 }
 
 // put your modlist repo here e.g. "your-username/ModListTemplate",
-let USER_AGENT = "" || process.env.USER_AGENT;
+let USER_AGENT = "" || process.env.GITHUB_REPO;
 
 if (USER_AGENT === "") {
     console.error("Failed to automatically pull repo from github env var / you didn't update USER_AGENT as your repo in scripts/index.js")
