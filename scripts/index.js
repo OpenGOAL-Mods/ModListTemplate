@@ -17,7 +17,7 @@ if (args.length !== 0) {
 let USER_AGENT = "" || process.env.USER_AGENT;
 
 if (USER_AGENT === "") {
-    console.error("You forgot to specify your repo as USER_AGENT in scripts/index.js")
+    console.error("Failed to automatically pull repo from github env var / you didn't update USER_AGENT as your repo in scripts/index.js")
 }
 
 let octokit = undefined;
