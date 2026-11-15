@@ -16,7 +16,7 @@ if (args.length !== 0) {
 // put your modlist repo here e.g. "your-username/ModListTemplate",
 let USER_AGENT = "" || process.env.USER_AGENT;
 
-if (USER_AGENT === "") {
+if (!!USER_AGENT || USER_AGENT === "") {
     console.error("Missing USER_AGENT env var / override in index.js")
     exit(1);
 }
