@@ -11,9 +11,9 @@ To simplify the maintenance of json file, you just need to add details about you
 ## Setup
 
 - Click the green "Use this template" button in the top right to create your own repo from this template
-- In your repo, fill out the information about your mod list and mod(s)
-    - In `scripts/config.yaml`, set your mod list `name` at the top
-    - In `scripts/config.yaml`, add your mod(s), following the format in the examples provided (without the comments, i.e. no `#`s)
+- In your repo, edit the `scripts/config.yaml` file and fill out the information about your mod list and mod(s):
+    - Set your mod list `name` at the top
+    - Add your mod(s) under `mods`, following the format in the examples provided (without the comments, i.e. no `#`s)
 
 ## Mod List Update
 
