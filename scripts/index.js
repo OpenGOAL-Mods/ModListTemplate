@@ -14,7 +14,7 @@ if (args.length !== 0) {
 }
 
 // put your modlist repo here e.g. "your-username/ModListTemplate",
-let USER_AGENT = "";
+let USER_AGENT = "" || process.env.USER_AGENT;
 
 if (USER_AGENT === "") {
     console.error("You forgot to specify your repo as USER_AGENT in scripts/index.js")
