@@ -18,7 +18,7 @@ let USER_AGENT = "" || process.env.GITHUB_REPO;
 
 if (USER_AGENT === "") {
     console.error("Missing GITHUB_REPO env var / USER_AGENT override in index.js")
-    return;
+    exit(1);
 }
 
 console.log(`Using USER_AGENT=${USER_AGENT}`);
