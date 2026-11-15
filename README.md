@@ -14,7 +14,6 @@ To simplify the maintenance of json file, you just need to add details about you
 - In your repo, fill out the information about your mod list and mod(s)
     - In `scripts/config.yaml`, set your mod list `name` at the top
     - In `scripts/config.yaml`, add your mod(s), following the format in the examples provided (without the comments, i.e. no `#`s)
-    - In `scripts/index.js`, set the `USER_AGENT` to match your repo, e.g. `your-username/ModListTemplate`
 
 ## Mod List Update
 
