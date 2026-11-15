@@ -16,19 +16,8 @@ permissions:
   id-token: write
 
 jobs:
-  prep_vars:
-    name: "Prep Vars"
-    runs-on: ubuntu-latest
-    outputs:
-        user_agent: ${{ steps.prep-vars.outputs.USER_AGENT }}
-    steps:
-      - name: Setup Env
-        id: prep-vars
-        run: |
-          USER_AGENT=${{ github.repository }}
   update_mod_source:
     name: "Update Mod Source"
-    needs: prep_vars
     runs-on: ubuntu-latest
     steps:    
       - uses: actions/checkout@v6
@@ -44,7 +33,7 @@ jobs:
 
       - name: Potentially Update Mod Source
         env:
-          USER_AGENT: ${{ needs.prep_vars.outputs.user_agent }}
+          USER_AGENT: ${{ github.repository }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd scripts
