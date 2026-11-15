@@ -19,6 +19,7 @@ jobs:
   update_mod_source:
     name: "Update Mod Source"
     runs-on: ubuntu-latest
+    if: github.repository != 'OpenGOAL-Mods/ModListTemplate' # dont run on template repo
     steps:    
       - uses: actions/checkout@v6
         with:
