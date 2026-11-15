@@ -23,7 +23,6 @@ jobs:
       - name: Setup Env
         run: |
           USER_AGENT=${{ github.repository }}
-          echo $USER_AGENT >> $GITHUB_OUTPUT
     
       - uses: actions/checkout@v6
         with:
